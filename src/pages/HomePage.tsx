@@ -10,11 +10,11 @@ import Skills from "../components/Skills";
 function HomePage() {
 	return (
 		<>
-			<header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 ">
+			<header className="bg-background w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 ">
 				<Nav />
 			</header>
 
-			<main>
+			<main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl">
 				<Hero />
 				<About />
 				<Skills />
