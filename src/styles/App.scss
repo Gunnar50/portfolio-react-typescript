@@ -1,0 +1,27 @@
+.heading {
+	&::before {
+		content: "<";
+		margin-right: 0.25rem;
+	}
+	&::after {
+		content: ">";
+		margin-left: 0.25rem;
+	}
+}
+
+.img-teal-shadow {
+	position: relative;
+
+	&:before {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 20px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(28deg, #68b4a5 0%, #0f3b4d 84%);
+		transition: opacity 0.3s;
+		border-radius: inherit;
+	}
+}
