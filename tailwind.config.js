@@ -77,10 +77,16 @@ module.exports = {
 					from: { height: "var(--radix-accordion-content-height)" },
 					to: { height: 0 },
 				},
+				bounce: {
+					from: { transform: "translateY(10px)" },
+					to: { transform: "translateY(0)" },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
+				bounce:
+					"bounce .5s cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite alternate ",
 			},
 		},
 	},
