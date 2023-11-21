@@ -51,6 +51,9 @@ module.exports = {
 				"light-accent": {
 					DEFAULT: "var(--light-accent)",
 				},
+				"skills-bg": {
+					DEFAULT: "var(--skills-bg)",
+				},
 				"bright-pink": {
 					DEFAULT: "var(--bright-pink)",
 				},
@@ -68,6 +71,12 @@ module.exports = {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			},
+			animationDelay: {
+				0: "0s",
+				2: "0.2s",
+				4: "0.4s",
+				6: "0.6s",
+			},
 			keyframes: {
 				"accordion-down": {
 					from: { height: 0 },
@@ -81,12 +90,28 @@ module.exports = {
 					from: { transform: "translateY(10px)" },
 					to: { transform: "translateY(0)" },
 				},
+				fadeIn: {
+					from: { opacity: 0 },
+					to: { opacity: 1 },
+				},
+				slideUp: {
+					from: { transform: "translateY(100%)" },
+					to: { transform: "translateY(0)" },
+				},
+				bounce: {
+					from: { transform: "translateY(10px)" },
+					to: { transform: "translateY(0)" },
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				bounce:
 					"bounce .5s cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite alternate ",
+				slideUp: "slideUp 0.5s",
+				slideUpEaseInOut: "slideUp 0.5s ease-in-out",
+				slideUpCubiBezier: "slideUp 1s cubic-bezier(0.165, 0.84, 0.44, 1)",
+				fadeIn: "fadeIn 1.5s",
 			},
 		},
 	},
