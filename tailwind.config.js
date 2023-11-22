@@ -54,6 +54,9 @@ module.exports = {
 				"skills-bg": {
 					DEFAULT: "var(--skills-bg)",
 				},
+				"project-bg": {
+					DEFAULT: "var(--project-bg)",
+				},
 				"bright-pink": {
 					DEFAULT: "var(--bright-pink)",
 				},
@@ -64,6 +67,12 @@ module.exports = {
 				card: {
 					DEFAULT: "var(--card)",
 					foreground: "var(--card-foreground)",
+				},
+				linkedin: {
+					DEFAULT: "rgb(90, 176, 247)",
+				},
+				youtube: {
+					DEFAULT: "rgb(255, 44, 44)",
 				},
 			},
 			borderRadius: {
