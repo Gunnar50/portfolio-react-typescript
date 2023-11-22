@@ -8,3 +8,34 @@
 		margin-left: 0.25rem;
 	}
 }
+
+.contact-shadow {
+	position: relative;
+	&:before {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(-117deg, #ff6b6b 0%, #ffa07a 86%);
+		transform: translate3d(60px, 40px, 0) scale(0.9);
+		filter: blur(0px);
+		opacity: var(1);
+		transition: opacity 0.3s;
+		border-radius: inherit;
+	}
+
+	&:after {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: inherit;
+		border-radius: inherit;
+	}
+}
