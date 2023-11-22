@@ -27,6 +27,7 @@
 		--muted-foreground: hsl(197, 67%, 18%);
 
 		--skills-bg: hsl(217, 19%, 27%);
+		--project-bg: #101c26;
 
 		--accent: hsl(0, 100%, 71%);
 		--accent-foreground: var(--foreground);
