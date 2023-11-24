@@ -74,6 +74,12 @@ module.exports = {
 				youtube: {
 					DEFAULT: "rgb(255, 44, 44)",
 				},
+				"header-bg": {
+					DEFAULT: "#020A11",
+				},
+				"footer-bg": {
+					DEFAULT: "#020A11",
+				},
 			},
 			borderRadius: {
 				lg: "var(--radius)",
