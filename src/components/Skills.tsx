@@ -29,6 +29,7 @@ const skillsData = [
 			"JavaScript",
 			"TypeScript",
 			"React",
+			"Redux",
 			"NextJS",
 			"Tailwind CSS",
 			"Bootstrap",
@@ -76,9 +77,12 @@ function Skills() {
 									<h3 className="text-2xl font-semibold">{item.label}</h3>
 								</div>
 								<div className="flex flex-wrap gap-2 mt-6">
-									{item.skills.map((skills) => {
+									{item.skills.map((skills, i) => {
 										return (
-											<div className=" bg-skills-bg px-2 py-2 rounded-sm">
+											<div
+												key={i}
+												className=" bg-skills-bg px-2 py-2 rounded-sm"
+											>
 												{skills}
 											</div>
 										);
