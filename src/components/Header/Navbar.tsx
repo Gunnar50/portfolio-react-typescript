@@ -24,7 +24,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="justify-between md:items-center md:flex">
+		<nav className="justify-between md:items-center md:flex max-w-3xl md:max-w-5xl mx-auto">
 			<div className="flex items-center justify-between py-3 md:py-3 md:block">
 				<div className="md:py-3 md:block">
 					<h2 className="text-2xl font-bold">
