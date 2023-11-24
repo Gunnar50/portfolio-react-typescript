@@ -10,7 +10,7 @@ import Skills from "../components/Skills";
 function HomePage() {
 	return (
 		<>
-			<header className="bg-background w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 ">
+			<header className="bg-header-bg w-full mx-auto px-4 md:px-20 fixed top-0 z-50 ">
 				<Nav />
 			</header>
 
@@ -23,7 +23,9 @@ function HomePage() {
 				<Contact />
 			</main>
 
-			<footer>
+			<footer className="bg-footer-bg w-full">
+				<hr className="w-full h-0.5 mx-auto mt-20 bg-neutral-200 border-0"></hr>
+
 				<Footer />
 			</footer>
 		</>
