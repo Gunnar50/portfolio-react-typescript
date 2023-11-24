@@ -1,10 +1,12 @@
 import { HiArrowDown } from "react-icons/hi";
 import { Link as ScrollLink } from "react-scroll/modules";
+import bgImage from "../assets/bgpattern.png";
 import profileImage from "../assets/images/profileImage.png";
 
 function Hero() {
 	return (
 		<section id="home">
+			<img src={bgImage} />
 			<div
 				className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 
 							sm:py-30 md:py-24 md:flex-row md:space-x-4 md:text-left"
