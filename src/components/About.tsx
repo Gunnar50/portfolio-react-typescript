@@ -1,4 +1,4 @@
-import bgImage from "../assets/bgpattern2.png";
+import bgImage from "../assets/bgpattern.png";
 import aboutImage from "../assets/images/bg10.png";
 
 function About() {
