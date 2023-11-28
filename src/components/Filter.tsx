@@ -11,11 +11,11 @@ function Filter() {
 		);
 		if (activeButton && underlineRef.current) {
 			underlineRef.current.style.width = `${activeButton.offsetWidth}px`;
-			underlineRef.current.style.transform = `translateX(${activeButton.offsetLeft}px)`;
+			underlineRef.current.style.transform = `translateX(calc(${activeButton.offsetLeft}px - 37px))`;
 		}
 	}, [selectedFilter]);
 	return (
-		<div className="relative flex gap-6 mt-10">
+		<div className="relative flex gap-6 mt-10 mx-auto px-9">
 			{filters.map((filter) => (
 				<button
 					key={filter}
