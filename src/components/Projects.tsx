@@ -1,18 +1,42 @@
+import { BsArrowUpRightSquare, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import linesc from "../assets/images/linesc-thumb.png";
+import lego from "../assets/projects/lego-homage/main.PNG";
+import linesc from "../assets/projects/linesc.png";
+import Filter from "./Filter";
 import SlideUp from "./SlideUp";
 
 const projects = [
 	{
 		id: 0,
 		title: "LinEsc Privilege Escalation",
-		description:
-			"The toolkit not only aims to identify potential paths for privilege escalation, focusing on elements such as 'sudo', 'suid', capabilities, and world-writable files, but also has the capability to generate a comprehensive report. This report details the findings and offers recommendations for mitigations. Designed with the potential for future improvements and expansions, the tool provides a thorough analysis of system vulnerabilities. For a comprehensive overview of its functional components, please refer to the README file located in the main repository.",
-		thumbnail: linesc,
+		description: "Privilege Escalation toolkit for linux systems.",
+		thumbnail: lego,
+		tags: ["Python", "Bash", "Kali Linux"],
+		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
+		link: "link",
+		filter: "Other",
+		type: "Python Script",
+	},
+	{
+		id: 1,
+		title: "LinEsc Privilege Escalation",
+		description: "Privilege Escalation toolkit for linux systems.",
+		thumbnail: lego,
 		tags: ["Python", "Bash", "Kali Linux"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "",
-		filter: "Software Development",
+		filter: "Other",
+		type: "Python Script",
+	},
+	{
+		id: 2,
+		title: "LinEsc Privilege Escalation",
+		description: "Privilege Escalation toolkit for linux systems.",
+		thumbnail: lego,
+		tags: ["Python", "Bash", "Kali Linux"],
+		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
+		link: "",
+		filter: "Other",
 		type: "Python Script",
 	},
 ];
@@ -37,13 +61,22 @@ function Projects() {
 				<h2 className="text-3xl font-bold mt-6 md:mt-0 md:text-4xl text-center">
 					Projects
 				</h2>
-
+				<Filter />
 				{/* PROJECT CARD */}
-				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+				<div
+					className="grid justify-center grid-cols-[repeat(auto-fit,_minmax(300px,_450px))] 
+								gap-x-10 gap-y-8 mt-10 "
+				>
 					{projects.map((project: ProjectType) => (
-						<SlideUp offset="-100px 0px -100px 0px" key={project.id}>
+						<SlideUp
+							classes="group object-fill"
+							offset="-100px 0px -100px 0px"
+							key={project.id}
+						>
 							<Link
-								className="cursor-pointer group flex flex-col rounded bg-gray-800 animate-slideUpCubiBezier animation-delay-2 transition-transform overflow-hidden"
+								className="cursor-pointer  flex flex-col rounded-md
+										  shadow-sm animate-slideUpCubiBezier animation-delay-2
+											transition-transform overflow-hidden relative group-hover:-translate-y-2 group-hover:shadow-2xl"
 								key={project.id}
 								to={`/projects/${project.id}`}
 							>
@@ -51,21 +84,51 @@ function Projects() {
 								<img
 									src={project.thumbnail}
 									alt={project.title}
-									width={1400}
-									height={1400}
-									className="w-full object-cover transition group-hover:scale-105"
+									className="w-full object-cover transition group-hover:opacity-75"
 								/>
-								<div className="px-4 py-4 flex-grow flex flex-col justify-between">
-									<div className="text-center">
-										{/* PROJECT TITLE */}
-										<h3 className="text-2xl font-semibold text-center text-white mb-2">
-											{project.title}
-										</h3>
+								<div
+									className="text-center absolute py-2 px-4 w-full bottom-0 bg-project-bg
+												transition-all group-hover: group-hover:pb-32"
+								>
+									{/* PROJECT TITLE */}
+									<h3 className="text-xl font-semibold text-center text-white mb-2">
+										{project.title}
+									</h3>
 
-										{/* PROJECT TYPE */}
-										<span className="text-gray-400 block mb-2">
-											{project.type}
-										</span>
+									{/* PROJECT DESCRIPTION */}
+									<p
+										className="text-gray-400 block mb-2 absolute left-1/2 -translate-x-1/2
+															top-12"
+									>
+										{project.description}
+									</p>
+									{/* GITHUB AND DEMO LINKS */}
+									<div
+										className={`my-4 flex w-full absolute left-1/2 -translate-x-1/2 top-20 gap-4 justify-center`}
+									>
+										{project.github && (
+											<Link to={project.github} target="_blank">
+												<div className="flex flex-col items-center group/item">
+													<BsGithub
+														size={30}
+														className="text-white transition-transform  group-hover/item:-translate-y-1 cursor-pointer"
+													/>
+													<span className="text-white">GitHub</span>
+												</div>
+											</Link>
+										)}
+
+										{project.link && (
+											<Link to={project.link} target="_blank">
+												<div className="flex flex-col items-center group/item">
+													<BsArrowUpRightSquare
+														size={30}
+														className="text-white transition-transform group-hover/item:-translate-y-1 cursor-pointer"
+													/>
+													<span className="text-white">Live Demo</span>
+												</div>
+											</Link>
+										)}
 									</div>
 								</div>
 							</Link>

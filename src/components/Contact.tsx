@@ -47,9 +47,9 @@ function Contact() {
 						<p>feel free to directly contact me via Email or WhatsApp</p>
 					</div>
 					<div className="md:w-1/2 flex flex-col gap-3">
-						{contactItems.map((item) => {
+						{contactItems.map((item, i) => {
 							return (
-								<Link to={item.link}>
+								<Link to={item.link} key={i}>
 									<div className="flex items-center gap-3 transition hover:translate-x-1 hover:text-secondary">
 										<item.icon size={30} />
 										<span>{item.label}</span>

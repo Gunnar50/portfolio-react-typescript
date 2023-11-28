@@ -1,10 +1,16 @@
 import { HiArrowDown } from "react-icons/hi";
 import { Link as ScrollLink } from "react-scroll/modules";
+import cv from "../assets/Gustavo_Passarella_CV_SE-2023.pdf";
+import bgImage from "../assets/bgpattern2.png";
 import profileImage from "../assets/images/profileImage.png";
 
 function Hero() {
 	return (
-		<section id="home">
+		<section id="home" style={{ position: "relative" }}>
+			<div
+				style={{ backgroundImage: `url(${bgImage})` }}
+				className="bg-pattern bg-hero"
+			></div>
 			<div
 				className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 
 							sm:py-30 md:py-24 md:flex-row md:space-x-4 md:text-left"
@@ -25,16 +31,16 @@ function Hero() {
 						Web <span className="text-teal-600">Developer</span> & Software{" "}
 						<span className="text-teal-600">Engineer</span>
 					</p>
-					<p className="mt-4 mb-6 text-gray-400">
+					<p className="mt-4 mb-10 text-gray-400">
 						I'm a Software Engineer & Cyber Security Graduate based in London,
 						UK
 					</p>
 					<a
-						href="/Gustavo_Passarella_CV_SE-2023.pdf"
-						download
+						target="_blank"
+						href={cv}
 						className="text-secondary-foreground font-semibold px-6 py-3 bg-secondary rounded-lg shadow hover:bg-accent transition"
 					>
-						Download CV
+						Resume
 					</a>
 				</div>
 			</div>

@@ -1,11 +1,13 @@
-import React, { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
+
 interface Props {
+	classes?: string;
 	offset?: string;
 	children?: ReactNode;
 	// any props that come into the component
 }
 
-export default function SlideUp({ children, offset = "0px" }: Props) {
+function SlideUp({ classes = "", children, offset = "0px" }: Props) {
 	const ref = useRef(null);
 
 	useEffect(() => {
@@ -23,14 +25,15 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
 		);
 
 		if (ref.current) {
-			// console.log("Ref", ref.current);
 			observer.observe(ref.current);
 		}
 	}, [ref]);
 
 	return (
-		<div ref={ref} className="relative opacity-0">
+		<div ref={ref} className={`relative opacity-0 ${classes}`}>
 			{children}
 		</div>
 	);
 }
+
+export default SlideUp;
