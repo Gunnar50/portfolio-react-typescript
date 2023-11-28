@@ -59,7 +59,7 @@ const Navbar = () => {
 									<ScrollLink
 										to={item.link}
 										className={
-											"block lg:inline-block text-gray-200  hover:text-gray-400 cursor-pointer"
+											"block lg:inline-block text-gray-200  hover:text-gray-400 cursor-pointer transition"
 										}
 										activeClass="active"
 										spy={true}
