@@ -1,6 +1,7 @@
 import { BsArrowUpRightSquare, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import linesc from "../assets/images/linesc-thumb.png";
+import lego from "../assets/projects/lego-homage/main.PNG";
+import linesc from "../assets/projects/linesc.png";
 import Filter from "./Filter";
 import SlideUp from "./SlideUp";
 
@@ -8,8 +9,8 @@ const projects = [
 	{
 		id: 0,
 		title: "LinEsc Privilege Escalation",
-		description: "",
-		thumbnail: linesc,
+		description: "Privilege Escalation toolkit for linux systems.",
+		thumbnail: lego,
 		tags: ["Python", "Bash", "Kali Linux"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "link",
@@ -19,8 +20,8 @@ const projects = [
 	{
 		id: 1,
 		title: "LinEsc Privilege Escalation",
-		description: "",
-		thumbnail: linesc,
+		description: "Privilege Escalation toolkit for linux systems.",
+		thumbnail: lego,
 		tags: ["Python", "Bash", "Kali Linux"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "",
@@ -30,8 +31,8 @@ const projects = [
 	{
 		id: 2,
 		title: "LinEsc Privilege Escalation",
-		description: "",
-		thumbnail: linesc,
+		description: "Privilege Escalation toolkit for linux systems.",
+		thumbnail: lego,
 		tags: ["Python", "Bash", "Kali Linux"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "",
@@ -62,10 +63,13 @@ function Projects() {
 				</h2>
 				<Filter />
 				{/* PROJECT CARD */}
-				<div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-x-10 gap-y-8 mt-10">
+				<div
+					className="grid justify-center grid-cols-[repeat(auto-fit,_minmax(300px,_450px))] 
+								gap-x-10 gap-y-8 mt-10 "
+				>
 					{projects.map((project: ProjectType) => (
 						<SlideUp
-							classes="group"
+							classes="group object-fill"
 							offset="-100px 0px -100px 0px"
 							key={project.id}
 						>
@@ -80,8 +84,6 @@ function Projects() {
 								<img
 									src={project.thumbnail}
 									alt={project.title}
-									// width={1400}
-									// height={1400}
 									className="w-full object-cover transition group-hover:opacity-75"
 								/>
 								<div
@@ -93,13 +95,13 @@ function Projects() {
 										{project.title}
 									</h3>
 
-									{/* PROJECT TYPE */}
-									<span
+									{/* PROJECT DESCRIPTION */}
+									<p
 										className="text-gray-400 block mb-2 absolute left-1/2 -translate-x-1/2
 															top-12"
 									>
-										{project.type}
-									</span>
+										{project.description}
+									</p>
 									{/* GITHUB AND DEMO LINKS */}
 									<div
 										className={`my-4 flex w-full absolute left-1/2 -translate-x-1/2 top-20 gap-4 justify-center`}
