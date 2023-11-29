@@ -1,6 +1,6 @@
 import { BsArrowUpRightSquare, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import lego from "../assets/projects/lego-homage/main.PNG";
+import lego from "../assets/projects/lego-homage/main.png";
 import linesc from "../assets/projects/linesc.png";
 import Filter from "./Filter";
 import SlideUp from "./SlideUp";
@@ -9,34 +9,38 @@ const projects = [
 	{
 		id: 0,
 		title: "LinEsc Privilege Escalation",
+		about: "Privilege Escalation toolkit for linux systems.",
 		description: "Privilege Escalation toolkit for linux systems.",
 		thumbnail: lego,
-		tags: ["Python", "Bash", "Kali Linux"],
+		tech: ["Python", "Bash", "Kali", "GTFOBins"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "link",
-		filter: "Other",
+		filter: ["Other"],
 		type: "Python Script",
 	},
 	{
 		id: 1,
 		title: "LinEsc Privilege Escalation",
-		description: "Privilege Escalation toolkit for linux systems.",
+		about: "Privilege Escalation toolkit for linux systems.",
+		description:
+			"Privilege Escalation toolkit for linux systems. Privilege Escalation toolkit for linux systems.",
 		thumbnail: lego,
-		tags: ["Python", "Bash", "Kali Linux"],
+		tech: ["Python", "Bash", "Kali Linux"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "",
-		filter: "Other",
+		filter: ["Other"],
 		type: "Python Script",
 	},
 	{
 		id: 2,
 		title: "LinEsc Privilege Escalation",
+		about: "Privilege Escalation toolkit for linux systems.",
 		description: "Privilege Escalation toolkit for linux systems.",
 		thumbnail: lego,
-		tags: ["Python", "Bash", "Kali Linux"],
+		tech: ["Python", "Bash", "Kali Linux"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "",
-		filter: "Other",
+		filter: ["Other"],
 		type: "Python Script",
 	},
 ];
@@ -45,12 +49,13 @@ const projects = [
 type ProjectType = {
 	id: number;
 	title: string;
+	about: string;
 	description: string;
 	thumbnail: string;
-	tags: string[];
+	tech: string[];
 	github: string;
 	link: string;
-	filter: string;
+	filter: string[];
 	type: string;
 };
 
@@ -62,50 +67,35 @@ function Projects() {
 					Projects
 				</h2>
 				<Filter />
-				{/* PROJECT CARD */}
+
+				{/* GRID */}
 				<div
 					className="grid justify-center grid-cols-[repeat(auto-fit,_minmax(300px,_450px))] 
-								gap-x-10 gap-y-8 mt-10 "
+					gap-x-10 gap-y-8 mt-10 "
 				>
+					{/* PROJECT CARD */}
 					{projects.map((project: ProjectType) => (
 						<SlideUp
-							classes="group object-fill"
+							classes="project-item h-80"
 							offset="-100px 0px -100px 0px"
 							key={project.id}
 						>
-							<Link
-								className="cursor-pointer  flex flex-col rounded-md
-										  shadow-sm animate-slideUpCubiBezier animation-delay-2
-											transition-transform overflow-hidden relative group-hover:-translate-y-2 group-hover:shadow-2xl"
-								key={project.id}
-								to={`/projects/${project.id}`}
-							>
+							<Link key={project.id} to={`/projects/${project.id}`}>
 								{/* PROJECT IMAGE THUMBNAIL */}
-								<img
-									src={project.thumbnail}
-									alt={project.title}
-									className="w-full object-cover transition group-hover:opacity-75"
-								/>
-								<div
-									className="text-center absolute py-2 px-4 w-full bottom-0 bg-project-bg
-												transition-all group-hover: group-hover:pb-32"
-								>
+								<img src={project.thumbnail} alt={project.title} />
+								<div className="content-slate">
 									{/* PROJECT TITLE */}
-									<h3 className="text-xl font-semibold text-center text-white mb-2">
+									<h3 className="text-2xl font-bold text-center text-white mb-2">
 										{project.title}
 									</h3>
 
-									{/* PROJECT DESCRIPTION */}
-									<p
-										className="text-gray-400 block mb-2 absolute left-1/2 -translate-x-1/2
-															top-12"
-									>
-										{project.description}
-									</p>
+									{/* PROJECT ABOUT */}
+									<p className="text-gray-300 block mb-2">{project.about}</p>
+
+									{/* TECHNOLOGIES */}
+
 									{/* GITHUB AND DEMO LINKS */}
-									<div
-										className={`my-4 flex w-full absolute left-1/2 -translate-x-1/2 top-20 gap-4 justify-center`}
-									>
+									<div className={`flex w-full gap-4 justify-center`}>
 										{project.github && (
 											<Link to={project.github} target="_blank">
 												<div className="flex flex-col items-center group/item">
