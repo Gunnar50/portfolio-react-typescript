@@ -79,12 +79,10 @@ body {
 }
 
 .project-item {
-	margin: 0 0 1.5em;
 	position: relative;
 	cursor: pointer;
 	border-radius: 9px;
 	object-fit: cover;
-	// background-color: var(--button-index);
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
@@ -94,6 +92,9 @@ body {
 	align-items: flex-end;
 	border-radius: 9px;
 	break-inside: avoid;
+	height: 450px;
+	@apply md:h-[400px];
+	mask-image: radial-gradient(circle, white 100%, black 100%);
 
 	img {
 		width: 100%;
@@ -132,41 +133,35 @@ body {
 		right: 0px;
 		bottom: 0px;
 		left: 0px;
-		opacity: 0.3;
+		opacity: 0.9;
+		@apply md:opacity-[0.1];
 		transition: opacity 300ms ease-in-out;
-		/* background: linear-gradient(
-		  191deg,
-		  rgba(0, 0, 0, 0.1) 20%,
-		  rgba(0, 0, 0, 0.76) 100%
-		); */
 		background: linear-gradient(
 			180deg,
-			rgba(0, 0, 0, 0.54) 10%,
-			rgb(0, 0, 0, 0.9) 60%
+			hsla(209, 40%, 11%, 0.6) 10%,
+			hsla(209, 40%, 11%, 1) 60%
 		);
 	}
 
 	.content-slate {
 		position: relative;
-		opacity: 0;
+		opacity: 1;
 		z-index: 999;
-		transform: translateY(10%);
 		transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
+		@apply md:translate-y-[10%] md:opacity-0;
 	}
 
 	&:hover,
 	&:focus {
 		&:after {
-			opacity: 1;
+			@apply md:opacity-100;
 		}
 		.content-slate {
-			z-index: 999;
 			transform: none;
 			opacity: 1;
 		}
 		img {
-			transform: scale(1.02);
-			filter: blur(1px);
+			@apply md:scale-[1.02] md:blur-[1px];
 		}
 	}
 }
