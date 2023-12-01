@@ -1,21 +1,39 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
-function Filter() {
-	const [selectedFilter, setSelectedFilter] = useState<string>("All");
+type FilterType = {
+	selectedFilter: string;
+	setSelectedFilter: (value: string) => void;
+};
+
+function Filter({ selectedFilter, setSelectedFilter }: FilterType) {
 	const underlineRef = useRef<HTMLSpanElement>(null);
 	const filters = ["All", "Frontend", "Fullstack", "Challenges", "Other"];
 
-	useEffect(() => {
+	const updateUnderlinePosition = () => {
 		const activeButton = document.querySelector<HTMLButtonElement>(
 			`.filter-btn[data-filter="${selectedFilter}"]`
 		);
 		if (activeButton && underlineRef.current) {
-			underlineRef.current.style.width = `${activeButton.offsetWidth}px`;
-			underlineRef.current.style.transform = `translateX(calc(${activeButton.offsetLeft}px - 37px))`;
+			const buttonWidth = activeButton.offsetWidth;
+			const buttonOffsetLeft = activeButton.offsetLeft;
+
+			underlineRef.current.style.width = `${buttonWidth}px`;
+			underlineRef.current.style.left = `${buttonOffsetLeft}px`;
 		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("resize", updateUnderlinePosition);
+		updateUnderlinePosition(); // Call this function on component mount and resize
+
+		// Cleanup
+		return () => {
+			window.removeEventListener("resize", updateUnderlinePosition);
+		};
 	}, [selectedFilter]);
+
 	return (
-		<div className="relative flex gap-6 mt-10 mx-auto px-9">
+		<div className="relative flex gap-6 mt-10 mx-auto justify-center">
 			{filters.map((filter) => (
 				<button
 					key={filter}
