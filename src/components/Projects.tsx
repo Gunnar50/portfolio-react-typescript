@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BsArrowUpRightSquare, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import lego from "../assets/projects/lego-homage/main.png";
@@ -14,8 +15,8 @@ const projects = [
 		thumbnail: lego,
 		tech: ["Python", "Bash", "Kali", "GTFOBins"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
-		link: "link",
-		filter: ["Other"],
+		link: "https://link.com",
+		filter: ["All", "Other"],
 		type: "Python Script",
 	},
 	{
@@ -28,7 +29,7 @@ const projects = [
 		tech: ["Python", "Bash", "Kali Linux"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "",
-		filter: ["Other"],
+		filter: ["All", "Challenges", "Other"],
 		type: "Python Script",
 	},
 	{
@@ -40,7 +41,7 @@ const projects = [
 		tech: ["Python", "Bash", "Kali Linux"],
 		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
 		link: "",
-		filter: ["Other"],
+		filter: ["All", "Frontend", "Other"],
 		type: "Python Script",
 	},
 ];
@@ -60,27 +61,45 @@ type ProjectType = {
 };
 
 function Projects() {
+	const [selectedFilter, setSelectedFilter] = useState<string>("All");
+	const [filteredProjects, setFilteredProjects] =
+		useState<ProjectType[]>(projects);
+
+	useEffect(() => {
+		const newFilteredProjects = projects.filter((project) =>
+			project.filter.includes(selectedFilter)
+		);
+		setFilteredProjects(newFilteredProjects);
+	}, [selectedFilter]);
+
 	return (
 		<section id="projects">
 			<div className="py-16">
 				<h2 className="text-3xl font-bold mt-6 md:mt-0 md:text-4xl text-center">
 					Projects
 				</h2>
-				<Filter />
+				<Filter
+					selectedFilter={selectedFilter}
+					setSelectedFilter={setSelectedFilter}
+				/>
 
 				{/* GRID */}
 				<div
-					className="grid justify-center grid-cols-[repeat(auto-fit,_minmax(300px,_450px))] 
-					gap-x-10 gap-y-8 mt-10 "
+					className="grid justify-center grid-cols-[repeat(auto-fit,_minmax(300px,_370px))] 
+					gap-x-6 gap-y-6 mt-10 "
 				>
 					{/* PROJECT CARD */}
-					{projects.map((project: ProjectType) => (
+					{filteredProjects.map((project: ProjectType) => (
 						<SlideUp
-							classes="project-item h-80"
+							classes="project-item"
 							offset="-100px 0px -100px 0px"
 							key={project.id}
 						>
-							<Link key={project.id} to={`/projects/${project.id}`}>
+							<Link
+								key={project.id}
+								to={project.link || project.github}
+								target="_blank"
+							>
 								{/* PROJECT IMAGE THUMBNAIL */}
 								<img src={project.thumbnail} alt={project.title} />
 								<div className="content-slate">
@@ -90,9 +109,20 @@ function Projects() {
 									</h3>
 
 									{/* PROJECT ABOUT */}
-									<p className="text-gray-300 block mb-2">{project.about}</p>
+									<p className="text-gray-300 block mb-4 text-center">
+										{project.about}
+									</p>
 
 									{/* TECHNOLOGIES */}
+									{project.tech && (
+										<div className="flex flex-wrap gap-2 justify-center mb-5">
+											{project.tech.map((item) => (
+												<p className="bg-skills-bg px-2 py-1 rounded-xl text-sm">
+													{item}
+												</p>
+											))}
+										</div>
+									)}
 
 									{/* GITHUB AND DEMO LINKS */}
 									<div className={`flex w-full gap-4 justify-center`}>
