@@ -1,69 +1,15 @@
 import { useEffect, useState } from "react";
 import { BsArrowUpRightSquare, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import lego from "../assets/projects/lego-homage/main.png";
-import linesc from "../assets/projects/linesc.png";
+import { ProjectType, projects } from "../data/projects";
 import Filter from "./Filter";
 import SlideUp from "./SlideUp";
 
-const projects = [
-	{
-		id: 0,
-		title: "LinEsc Privilege Escalation",
-		about: "Privilege Escalation toolkit for linux systems.",
-		description: "Privilege Escalation toolkit for linux systems.",
-		thumbnail: lego,
-		tech: ["Python", "Bash", "Kali", "GTFOBins"],
-		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
-		link: "https://link.com",
-		filter: ["All", "Other"],
-		type: "Python Script",
-	},
-	{
-		id: 1,
-		title: "LinEsc Privilege Escalation",
-		about: "Privilege Escalation toolkit for linux systems.",
-		description:
-			"Privilege Escalation toolkit for linux systems. Privilege Escalation toolkit for linux systems.",
-		thumbnail: lego,
-		tech: ["Python", "Bash", "Kali Linux"],
-		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
-		link: "",
-		filter: ["All", "Challenges", "Other"],
-		type: "Python Script",
-	},
-	{
-		id: 2,
-		title: "LinEsc Privilege Escalation",
-		about: "Privilege Escalation toolkit for linux systems.",
-		description: "Privilege Escalation toolkit for linux systems.",
-		thumbnail: lego,
-		tech: ["Python", "Bash", "Kali Linux"],
-		github: "https://github.com/Gunnar50/LinEscPrivilegeEscalation",
-		link: "",
-		filter: ["All", "Frontend", "Other"],
-		type: "Python Script",
-	},
-];
-
-// Define the projects type
-type ProjectType = {
-	id: number;
-	title: string;
-	about: string;
-	description: string;
-	thumbnail: string;
-	tech: string[];
-	github: string;
-	link: string;
-	filter: string[];
-	type: string;
-};
-
 function Projects() {
 	const [selectedFilter, setSelectedFilter] = useState<string>("All");
-	const [filteredProjects, setFilteredProjects] =
-		useState<ProjectType[]>(projects);
+	const [filteredProjects, setFilteredProjects] = useState<ProjectType[]>(
+		projects.reverse()
+	);
 
 	useEffect(() => {
 		const newFilteredProjects = projects.filter((project) =>
