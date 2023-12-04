@@ -43,6 +43,10 @@
 		--ring: hsl(222.2 84% 4.9%);
 
 		--radius: 0.5rem;
+
+		--gray: #6c757d;
+		--gray-dark: #343a40;
+		--light-gray: #444;
 	}
 
 	.dark {
