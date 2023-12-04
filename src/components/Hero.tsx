@@ -1,20 +1,21 @@
 import { HiArrowDown } from "react-icons/hi";
 import { Link as ScrollLink } from "react-scroll/modules";
 import cv from "../assets/Gustavo_Passarella_CV_SE-2023.pdf";
-import bgImage from "../assets/bgpattern.png";
+import bgImage from "../assets/bgpattern2.png";
 import profileImage from "../assets/images/profileImage.png";
 
 function Hero() {
 	return (
-		<section id="home" style={{ position: "relative" }}>
+		<section id="home">
 			<div
-				style={{ backgroundImage: `url(${bgImage})` }}
-				className="bg-pattern bg-hero"
-			></div>
-			<div
-				className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 
+				className="relative md:h-[calc(100vh-200px)] flex flex-col text-center items-center 
+							justify-center animate-fadeIn animation-delay-2 my-10 py-16 
 							sm:py-30 md:py-24 md:flex-row md:space-x-4 md:text-left"
 			>
+				<div
+					style={{ backgroundImage: `url(${bgImage})` }}
+					className="bg-pattern bg-hero"
+				></div>
 				<div className="md:mt-2 md:w-1/2">
 					<img
 						src={profileImage}
@@ -38,10 +39,19 @@ function Hero() {
 					<a
 						target="_blank"
 						href={cv}
-						className="text-secondary-foreground font-semibold px-6 py-3 bg-secondary rounded-lg shadow hover:bg-accent transition"
+						className="text-secondary-foreground font-semibold px-6 py-3 bg-teal-700 hover:bg-primary rounded-lg shadow transition"
 					>
 						Resume
 					</a>
+					<ScrollLink
+						smooth={true}
+						offset={-100}
+						spy={true}
+						to="contact"
+						className="ml-3 text-primary-foreground font-semibold px-6 py-3 bg-secondary rounded-lg cursor-pointer shadow hover:bg-accent transition"
+					>
+						Contact
+					</ScrollLink>
 				</div>
 			</div>
 			<div className="flex flex-row items-center text-center justify-center ">

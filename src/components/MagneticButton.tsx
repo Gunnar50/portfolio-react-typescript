@@ -26,7 +26,7 @@ function MagneticButton({ children }: MagneticButtonProps) {
 			let y = clientY - (top + height / 2);
 
 			// Limit the movement range
-			const movementLimit = 5; // adjust this value as needed
+			const movementLimit = 3;
 			x = Math.max(Math.min(x, movementLimit), -movementLimit);
 			y = Math.max(Math.min(y, movementLimit), -movementLimit);
 
