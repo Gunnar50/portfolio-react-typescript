@@ -28,9 +28,14 @@ const Navbar = () => {
 			<div className="flex items-center justify-between py-3 md:py-3 md:block">
 				<div className="md:py-3 md:block">
 					<h2 className="text-2xl font-bold">
-						<NavLink to="/">
+						<ScrollLink
+							to="home"
+							smooth={true}
+							duration={500}
+							className="cursor-pointer"
+						>
 							<span>GustavoPassarella</span>
-						</NavLink>
+						</ScrollLink>
 					</h2>
 				</div>
 				<button

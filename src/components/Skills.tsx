@@ -1,71 +1,16 @@
-import backend from "../assets/images/backend1.png";
-import general from "../assets/images/general.png";
-import frontend from "../assets/images/react.png";
+import { SkillType, skillsData } from "../data/skills";
 import MagneticButton from "./MagneticButton";
-
-const skillsData = [
-	{
-		label: "Backend",
-		src: backend,
-		alt: "Backend skills gear icon",
-		skills: [
-			"Python",
-			"Django",
-			"JavaScript",
-			"NodeJS",
-			"ExpressJS",
-			"MongoDB",
-			"MySQL",
-			"GraphQL",
-			"Java",
-		],
-	},
-	{
-		label: "Frontend",
-		src: frontend,
-		alt: "Frontend skills atom icon",
-		skills: [
-			"HTML",
-			"CSS",
-			"SASS",
-			"JavaScript",
-			"TypeScript",
-			"React",
-			"Redux",
-			"NextJS",
-			"Tailwind CSS",
-			"Bootstrap",
-			"Figma",
-		],
-	},
-	{
-		label: "General Skills",
-		src: general,
-		alt: "General skills icon",
-		skills: [
-			"Object-Oriented Programming",
-			"Git",
-			"GitHub",
-			"Cisco Devices",
-			"Cryptography",
-			"Network Protocols",
-		],
-	},
-];
-
-type SkillType = {
-	label: string;
-	src: string;
-	alt: string;
-	skills: string[];
-};
 
 function Skills() {
 	return (
 		<section id="skills">
-			<div className="py-16">
+			<div className="py-16 animate-fadeIn animation-delay-2 ">
 				<h2 className="text-3xl font-bold mt-6 md:mt-0 md:text-4xl text-center">
 					Skills
+					<hr
+						className="w-12 border-t-4 rounded border-teal-700 absolute left-[50%] -translate-x-3
+									md:mt-1 md:w-14"
+					/>
 				</h2>
 				<div className="flex flex-wrap mt-10 justify-center gap-2">
 					{skillsData.map((item: SkillType, index) => {
@@ -81,10 +26,10 @@ function Skills() {
 								<div className="flex flex-wrap gap-2 mt-6">
 									{item.skills.map((skills, i) => {
 										return (
-											<MagneticButton>
+											<MagneticButton key={i}>
 												<button
-													key={i}
-													className="bg-skills-bg px-2 py-2 rounded-sm"
+													className="bg-skills-bg px-2 py-2 rounded-sm
+															 transition-colors hover:bg-teal-700"
 												>
 													{skills}
 												</button>
