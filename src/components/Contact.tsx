@@ -33,7 +33,8 @@ function Contact() {
 	return (
 		<section id="contact">
 			<div
-				className="mx-auto p-6 md:px-10 py-14 max-w-3xl bg-gradient-to-tr from-[#0B1D2F] to-[#134E48]
+				className="animate-fadeIn animation-delay-2  mx-auto p-6 md:px-10 py-14 max-w-3xl 
+							bg-gradient-to-tr from-[#0B1D2F] to-[#134E48]
 							rounded-tl-[20px] rounded-br-[20px] rounded-tr-[50px] rounded-bl-[50px] contact-shadow"
 			>
 				<h2 className="mb-10 text-3xl font-bold md:mt-0 md:text-4xl text-center">
@@ -46,6 +47,23 @@ function Contact() {
 						</h3>
 						<p>feel free to directly contact me via Email or WhatsApp</p>
 					</div>
+					<form action="https://api.web3forms.com/submit" method="POST">
+						<input
+							type="hidden"
+							name="access_key"
+							value="bb4d7297-595d-4a43-bbe9-718d25d09d9d"
+						/>
+
+						<input type="text" name="name" required />
+						<input type="email" name="email" required />
+						<textarea name="message" required></textarea>
+						<input
+							type="hidden"
+							name="redirect"
+							value="https://web3forms.com/success"
+						/>
+						<button type="submit">Submit Form</button>
+					</form>
 					<div className="md:w-1/2 flex flex-col gap-3">
 						{contactItems.map((item, i) => {
 							return (

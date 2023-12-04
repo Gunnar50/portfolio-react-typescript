@@ -24,16 +24,15 @@ function Filter({ selectedFilter, setSelectedFilter }: FilterType) {
 
 	useEffect(() => {
 		window.addEventListener("resize", updateUnderlinePosition);
-		updateUnderlinePosition(); // Call this function on component mount and resize
+		updateUnderlinePosition();
 
-		// Cleanup
 		return () => {
 			window.removeEventListener("resize", updateUnderlinePosition);
 		};
 	}, [selectedFilter]);
 
 	return (
-		<div className="relative flex gap-6 mt-10 mx-auto justify-center">
+		<div className="relative flex gap-3 sm:gap-6 mt-10 mx-auto justify-center">
 			{filters.map((filter) => (
 				<button
 					key={filter}
