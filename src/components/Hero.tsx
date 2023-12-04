@@ -1,4 +1,5 @@
 import { HiArrowDown } from "react-icons/hi";
+import { Parallax } from "react-parallax";
 import { Link as ScrollLink } from "react-scroll/modules";
 import cv from "../assets/Gustavo_Passarella_CV_SE-2023.pdf";
 import bgImage from "../assets/bgpattern2.png";
@@ -10,12 +11,14 @@ function Hero() {
 			<div
 				className="relative md:h-[calc(100vh-200px)] flex flex-col text-center items-center 
 							justify-center animate-fadeIn animation-delay-2 my-10 py-16 
-							sm:py-30 md:py-24 md:flex-row md:space-x-4 md:text-left"
+							sm:py-30 md:py-24 md:flex-row md:space-x-4 md:text-left
+							"
 			>
 				<div
 					style={{ backgroundImage: `url(${bgImage})` }}
 					className="bg-pattern bg-hero"
 				></div>
+
 				<div className="md:mt-2 md:w-1/2">
 					<img
 						src={profileImage}

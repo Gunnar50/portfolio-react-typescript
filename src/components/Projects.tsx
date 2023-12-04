@@ -35,7 +35,7 @@ function Projects() {
 				{/* GRID */}
 				<div
 					className="animate-fadeIn grid justify-center grid-cols-[repeat(auto-fit,_minmax(300px,_370px))] 
-					gap-x-6 gap-y-6 mt-10 "
+					gap-x-6 gap-y-6 mt-10"
 				>
 					{/* PROJECT CARD */}
 					{filteredProjects.map(
@@ -58,22 +58,32 @@ function Projects() {
 											src={project.thumbnail}
 											alt={project.title}
 										/>
-										<div data-hover className="content-slate">
+										<div data-hover className="content-slate cursor-none">
 											{/* PROJECT TITLE */}
-											<h3 className="text-2xl font-bold text-center text-white mb-2">
+											<h3
+												data-hover
+												className="text-2xl font-bold text-center text-white mb-2"
+											>
 												{project.title}
 											</h3>
 
 											{/* PROJECT ABOUT */}
-											<p className="text-gray-300 block mb-4 text-center">
+											<p
+												data-hover
+												className="text-gray-300 block mb-4 text-center"
+											>
 												{project.about}
 											</p>
 
 											{/* TECHNOLOGIES */}
 											{project.tech && (
-												<div className="flex flex-wrap gap-2 justify-center mb-5">
+												<div
+													data-hover
+													className="flex flex-wrap gap-2 justify-center mb-5"
+												>
 													{project.tech.map((item, index) => (
 														<p
+															data-hover
 															key={index}
 															className="bg-skills-bg px-2 py-1 rounded-xl text-sm"
 														>
@@ -84,7 +94,10 @@ function Projects() {
 											)}
 
 											{/* GITHUB AND DEMO LINKS */}
-											<div className={`flex w-full gap-4 justify-center`}>
+											<div
+												data-hover
+												className={`flex w-full gap-4 justify-center`}
+											>
 												{project.github && (
 													<Link to={project.github} target="_blank">
 														<div className="flex flex-col items-center group/item">

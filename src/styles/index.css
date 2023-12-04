@@ -38,6 +38,8 @@
 		--destructive: hsl(324, 91%, 41%);
 		--destructive-foreground: var(--foreground);
 
+		--neutral-primary: #d9d9d9;
+
 		--border: hsl(214.3 31.8% 91.4%);
 		--input: hsl(214.3 31.8% 91.4%);
 		--ring: hsl(222.2 84% 4.9%);

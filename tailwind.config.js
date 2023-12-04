@@ -40,6 +40,9 @@ module.exports = {
 					DEFAULT: "var(--destructive)",
 					foreground: "var(--destructive-foreground)",
 				},
+				"neutral-primary": {
+					DEFAULT: "var(--neutral-primary)",
+				},
 				muted: {
 					DEFAULT: "var(--muted)",
 					foreground: "var(--muted-foreground)",

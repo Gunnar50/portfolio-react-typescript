@@ -53,19 +53,6 @@ body {
 	background-position: center center;
 	z-index: -2;
 
-	// &:before {
-	// 	content: "";
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	bottom: 0;
-	// 	// background: radial-gradient(
-	// 	// 	circle,
-	// 	// 	rgba(255, 255, 255, 0) 0%,
-	// 	// 	hsl(207 63% 6%) 50%
-	// 	// );
-	// }
 	&.bg-hero {
 		@apply -left-80 top-64;
 		@apply md:left-28 md:top-0;
