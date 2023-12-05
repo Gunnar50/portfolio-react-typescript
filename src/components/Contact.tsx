@@ -1,4 +1,5 @@
 import {
+	AiOutlineLinkedin,
 	AiOutlineMail,
 	AiOutlinePhone,
 	AiOutlineWhatsApp,
@@ -27,6 +28,12 @@ const contactItems = [
 		link: `https://wa.me/${phoneNumber}`,
 		icon: AiOutlineWhatsApp,
 	},
+	{
+		id: 3,
+		label: "LinkedIn",
+		link: `https://www.linkedin.com/in/gustavo-passarella/`,
+		icon: AiOutlineLinkedin,
+	},
 ];
 
 function Contact() {
@@ -47,7 +54,8 @@ function Contact() {
 						</h3>
 						<p>feel free to directly contact me via Email or WhatsApp</p>
 					</div>
-					<form action="https://api.web3forms.com/submit" method="POST">
+
+					{/* <form action="https://api.web3forms.com/submit" method="POST">
 						<input
 							type="hidden"
 							name="access_key"
@@ -63,7 +71,8 @@ function Contact() {
 							value="https://web3forms.com/success"
 						/>
 						<button type="submit">Submit Form</button>
-					</form>
+					</form> */}
+
 					<div className="md:w-1/2 flex flex-col gap-3">
 						{contactItems.map((item, i) => {
 							return (
