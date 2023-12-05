@@ -1,16 +1,11 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 /* -------------------------- Internal Dependencies ------------------------- */
 import useIsMounted from "../hooks/useIsMounted";
 import "../styles/cursor.scss";
-
-// Define Props type for CursorStyle component
-interface CursorStyleProps {
-	cursorActive: boolean;
-}
 
 // Define a type for the Event used in mouse events
 type MouseEvent = globalThis.MouseEvent;
