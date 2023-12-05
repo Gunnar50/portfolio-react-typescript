@@ -4,7 +4,7 @@ import MagneticButton from "./MagneticButton";
 function Skills() {
 	return (
 		<section id="skills">
-			<div className="py-16 animate-fadeIn animation-delay-2 ">
+			<div className="pb-20 animate-fadeIn animation-delay-2 ">
 				<h2 className="text-3xl font-bold mt-6 md:mt-0 md:text-4xl text-center">
 					Skills
 					<hr

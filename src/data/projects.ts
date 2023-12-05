@@ -66,7 +66,7 @@ export const projects: ProjectType[] = [
 		tech: ["HTML", "CSS", "SASS"],
 		github: "https://github.com/Gunnar50/lego-index-clone",
 		link: "https://lego-homage-gustavo-passarella.netlify.app/",
-		filter: ["All", "Frontend"],
+		filter: ["All", "Web Development"],
 		type: "Frontend",
 	},
 	{
@@ -79,7 +79,7 @@ export const projects: ProjectType[] = [
 		tech: ["HTML", "SASS", "JavaScript", "OpenWeather API"],
 		github: "https://github.com/Gunnar50/weatherapp-vanilla-javascript",
 		link: "https://weather-vanillajs-gustavopassarella.netlify.app/",
-		filter: ["All", "Frontend", "Web Application"],
+		filter: ["All", "Web Development", "Web Application"],
 		type: "Web Application",
 	},
 	{
@@ -91,7 +91,7 @@ export const projects: ProjectType[] = [
 		tech: ["React", "SASS", "JavaScript"],
 		github: "https://github.com/Gunnar50/react-simpsons-quotes",
 		link: "https://simpsons-quote-gustavopassarella.netlify.app/",
-		filter: ["All", "Frontend", "Web Application"],
+		filter: ["All", "Web Development", "Web Application"],
 		type: "Web Application",
 	},
 	{
@@ -104,7 +104,7 @@ export const projects: ProjectType[] = [
 		tech: ["React", "SASS", "JavaScript", "Minimax"],
 		github: "https://github.com/Gunnar50/react-tictactoe",
 		link: "https://tictactoe-gustavo-passarella.netlify.app/",
-		filter: ["All", "Frontend", "Web Application"],
+		filter: ["All", "Web Development", "Web Application"],
 		type: "Web Application",
 	},
 	{
@@ -116,7 +116,7 @@ export const projects: ProjectType[] = [
 		tech: ["React", "Redux", "Local Storage", "SASS"],
 		github: "https://github.com/Gunnar50/react-redux-todolist",
 		link: "https://todo-list-gustavo-passarella.netlify.app/",
-		filter: ["All", "Frontend", "Web Application", "Challenges"],
+		filter: ["All", "Web Development", "Web Application", "Challenges"],
 		type: "Web Application",
 	},
 ];

@@ -1,6 +1,5 @@
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import { useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll/modules";
 import burgerAnimation from "../../assets/burger-menu-animation.json";
 
@@ -8,7 +7,7 @@ const navLinks = [
 	{ title: "About", link: "about", id: 0 },
 	{ title: "Skills", link: "skills", id: 1 },
 	{ title: "Projects", link: "projects", id: 2 },
-	{ title: "Experience", link: "exp", id: 3 },
+	// { title: "Experience", link: "exp", id: 3 },
 	{ title: "Contact", link: "contact", id: 4 },
 ];
 
@@ -57,14 +56,14 @@ const Navbar = () => {
 						isOpen ? "max-h-screen" : "max-h-0"
 					}`}
 				>
-					<ul className="md:flex md:space-x-6 space-y-8 md:space-y-0">
+					<ul className="md:flex md:space-x-6 md:space-y-0 pb-4 md:pb-0">
 						{navLinks.map((item) => {
 							return (
 								<li key={item.id}>
 									<ScrollLink
 										to={item.link}
 										className={
-											"block lg:inline-block text-gray-200  hover:text-gray-400 cursor-pointer transition"
+											"block lg:inline-block text-gray-200  hover:text-gray-400 cursor-pointer transition p-2 md:p-0"
 										}
 										activeClass="active"
 										spy={true}
