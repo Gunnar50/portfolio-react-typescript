@@ -1,0 +1,14 @@
+.icon-container {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: 100px;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+		@apply bg-teal-700;
+	}
+}
