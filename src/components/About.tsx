@@ -33,12 +33,9 @@ function About() {
 						I have recently completed{" "}
 						<span className="font-bold"> The Jump Digital School's</span>{" "}
 						12-week Full-Stack
-						<span className="font-bold text-teal-500">
-							{" "}
-							Software Engineer
-						</span>{" "}
-						bootcamp programme, which has enabled me to develop and deploy
-						full-stack websites and applications to a professional standard from{" "}
+						<span className="font-bold"> Software Engineer</span> bootcamp
+						programme, which has enabled me to develop and deploy full-stack
+						websites and applications to a professional standard.
 					</p>
 					<br />
 
@@ -50,15 +47,15 @@ function About() {
 					<br />
 					<p>
 						I have a passion for
-						<span className="font-bold text-teal-500"> technology</span> and a
-						desire to always push the limits of what is possible. I am excited
-						to see where it can take me and I am open to new opportunities,
+						<span className="font-bold"> technology</span> and a desire to
+						always push the limits of what is possible. I am excited to see
+						where it can take me and I am open to new opportunities, so
 						<ScrollLink
 							smooth={true}
 							offset={-100}
 							spy={true}
 							to="contact"
-							className="font-bold text-secondary cursor-pointer"
+							className="font-bold text-teal-500 cursor-pointer"
 						>
 							{" "}
 							let's have a chat.
