@@ -23,7 +23,7 @@ function Projects() {
 				<h2 className="relative text-3xl font-bold mt-6 md:mt-0 md:text-4xl text-center">
 					Projects
 					<hr
-						className="w-12 border-t-4 rounded border-teal-700 absolute left-[50%] translate-x-3
+						className="w-12 border-t-4 rounded border-teal-700 absolute left-[50%] translate-x-2
 									md:mt-1 md:w-14"
 					/>
 				</h2>
@@ -34,7 +34,7 @@ function Projects() {
 
 				{/* GRID */}
 				<div
-					className="animate-fadeIn grid justify-center grid-cols-[repeat(auto-fit,_minmax(300px,_370px))] 
+					className="animate-fadeIn grid justify-center grid-cols-[repeat(auto-fit,_minmax(300px,_300px))] 
 					gap-x-6 gap-y-6 mt-10"
 				>
 					{/* PROJECT CARD */}
