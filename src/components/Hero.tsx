@@ -35,15 +35,15 @@ function Hero() {
 						<span className="text-teal-600">Engineer</span>
 					</p>
 					<p className="mt-4 mb-10 text-gray-400">
-						I'm a Software Engineer & Cyber Security Graduate based in London,
-						UK
+						I'm a Software Engineer & Cyber Security Graduate based in London
+						(U.K)
 					</p>
 					<a
 						target="_blank"
 						href={cv}
 						className="text-secondary-foreground font-semibold px-6 py-3 bg-teal-700 hover:bg-primary rounded-lg shadow transition"
 					>
-						Resume
+						Download CV
 					</a>
 					<ScrollLink
 						smooth={true}
