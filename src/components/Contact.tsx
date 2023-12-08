@@ -46,13 +46,17 @@ function Contact() {
 			>
 				<h2 className="mb-10 text-3xl font-bold md:mt-0 md:text-4xl text-center">
 					Contact
+					<hr
+						className="w-12 border-t-4 rounded border-teal-700 absolute left-[50%] translate-x-2
+									md:mt-1 md:w-14"
+					/>
 				</h2>
 				<div className="flex flex-col items-center md:flex-row md:gap-10 md:items-start">
 					<div className="md:w-3/5 mb-8 text-center md:text-left md:px-10 ">
 						<h3 className="text-2xl md:text-3xl font-semibold mb-4">
 							Available for freelance and fulltime opportunities
 						</h3>
-						<p>feel free to directly contact me via Email or WhatsApp</p>
+						<p>Feel free to directly contact me via Email or WhatsApp.</p>
 					</div>
 
 					{/* <form action="https://api.web3forms.com/submit" method="POST">
