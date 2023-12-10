@@ -72,8 +72,7 @@ export const projects: ProjectType[] = [
 	{
 		id: 4,
 		title: "WeatherApp",
-		about:
-			"Weather web application designed to provide real-time weather information",
+		about: "Weather web app designed to provide real-time weather info",
 		description: "",
 		thumbnail: weather,
 		tech: ["HTML", "SASS", "JavaScript", "OpenWeather API"],
@@ -85,7 +84,7 @@ export const projects: ProjectType[] = [
 	{
 		id: 5,
 		title: "The Simpsons Quote Generator",
-		about: 'Web application that generates quotes from "The Simpsons" TV show',
+		about: 'Web application that generates quotes from "The Simpsons"',
 		description: "",
 		thumbnail: simpsons,
 		tech: ["React", "SASS", "JavaScript"],
@@ -97,8 +96,7 @@ export const projects: ProjectType[] = [
 	{
 		id: 6,
 		title: "Tic-Tac-Toe",
-		about:
-			"Classic game featuring an unbeatable AI implemented using the Minimax algorithm",
+		about: "Classic game featuring an unbeatable AI",
 		description: "",
 		thumbnail: tictactoe,
 		tech: ["React", "SASS", "JavaScript", "Minimax"],

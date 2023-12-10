@@ -47,20 +47,23 @@ body {
 
 .bg-pattern {
 	height: 700px;
-	width: 200%;
-	@apply md:w-full;
+	width: 100%;
+	// @apply md:w-full;
 	position: absolute;
-	background-position: center center;
+	// background-position: -31rem -29rem;
+	@apply bg-[60%_center];
+	@apply md:bg-center;
 	z-index: -2;
 
 	&.bg-hero {
-		@apply -left-80 top-64;
-		@apply md:left-28 md:top-0;
+		@apply left-[calc(50%)] -translate-x-[50%] top-64;
+		@apply md:left-20 md:translate-x-0;
+		@apply md:top-[50%] md:-translate-y-[50%];
 		z-index: -1;
 	}
 
 	&.bg-about {
-		@apply -left-[324px] top-[44px];
+		@apply left-5 top-[44px];
 		@apply md:-left-64 md:-top-10;
 	}
 }
@@ -73,7 +76,8 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
-	padding: 1.4rem 2rem;
+	padding: 1.4rem 1rem;
+	@apply md:px-8;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;

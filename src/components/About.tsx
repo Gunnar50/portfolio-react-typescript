@@ -17,8 +17,8 @@ function About() {
 					<h2 className="text-3xl text-center md:text-left font-bold my-6 md:mt-0 md:text-4xl relative">
 						About
 						<hr
-							className="w-12 border-t-4 rounded border-teal-700 absolute left-[50%] -translate-x-11
-									md:mt-1 md:w-14 md:left-0 md:translate-x-0"
+							className="w-10 border-t-4 rounded border-teal-700 absolute left-[50%] -translate-x-12
+									md:mt-1 md:w-12 md:left-0 md:-translate-x-1"
 						/>
 					</h2>
 					<p>

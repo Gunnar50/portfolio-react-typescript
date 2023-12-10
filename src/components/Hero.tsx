@@ -26,7 +26,7 @@ function Hero() {
 						className="rounded-full shadow-2xl"
 					/>
 				</div>
-				<div className="md:mt-2 md:w-3/5">
+				<div className="md:mt-2 md:w-3/5 relative">
 					<h1 className="heading text-4xl font-bold mt-6 md:mt-0 md:text-5xl md:whitespace-nowrap  md:-ml-10">
 						Hi, I'm Gustavo!
 					</h1>

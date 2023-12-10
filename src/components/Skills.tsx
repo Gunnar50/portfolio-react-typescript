@@ -8,11 +8,11 @@ function Skills() {
 				<h2 className="text-3xl font-bold mt-6 md:mt-0 md:text-4xl text-center">
 					Skills
 					<hr
-						className="w-12 border-t-4 rounded border-teal-700 absolute left-[50%] -translate-x-3
-									md:mt-1 md:w-14"
+						className="w-10 border-t-4 rounded border-teal-700 absolute left-[50%] -translate-x-[36px]
+									md:mt-1 md:w-12 md:-translate-x-[45px]"
 					/>
 				</h2>
-				<div className="flex flex-wrap mt-10 justify-center gap-2">
+				<div className="flex flex-wrap mt-10 justify-center gap-6">
 					{skillsData.map((item: SkillType, index) => {
 						return (
 							<div
