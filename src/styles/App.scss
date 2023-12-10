@@ -48,9 +48,7 @@ body {
 .bg-pattern {
 	height: 700px;
 	width: 100%;
-	// @apply md:w-full;
 	position: absolute;
-	// background-position: -31rem -29rem;
 	@apply bg-[60%_center];
 	@apply md:bg-center;
 	z-index: -2;
