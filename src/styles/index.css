@@ -49,6 +49,8 @@
 		--gray: #6c757d;
 		--gray-dark: #343a40;
 		--light-gray: #444;
+
+		--toastify-color-success: hsl(175 84% 32%);
 	}
 
 	.dark {
