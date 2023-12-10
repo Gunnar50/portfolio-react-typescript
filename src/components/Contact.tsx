@@ -47,8 +47,8 @@ function Contact() {
 				<h2 className="mb-10 text-3xl font-bold md:mt-0 md:text-4xl text-center">
 					Contact
 					<hr
-						className="w-12 border-t-4 rounded border-teal-700 absolute left-[50%] translate-x-2
-									md:mt-1 md:w-14"
+						className="w-12 border-t-4 rounded border-teal-700 absolute left-[50%] -translate-x-[54px]
+									md:mt-1 md:w-14 md:-translate-x-[65px]"
 					/>
 				</h2>
 				<div className="flex flex-col items-center md:flex-row md:gap-10 md:items-start">
