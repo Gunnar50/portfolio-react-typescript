@@ -29,7 +29,7 @@
 		--skills-bg: hsl(217, 19%, 27%);
 		--project-bg: hsl(207, 41%, 11%);
 
-		--accent: hsl(0, 100%, 71%);
+		--accent: hsl(0, 100%, 68%);
 		--accent-foreground: var(--foreground);
 
 		--light-accent: hsl(17, 100%, 74%);
@@ -49,6 +49,8 @@
 		--gray: #6c757d;
 		--gray-dark: #343a40;
 		--light-gray: #444;
+
+		--toastify-color-success: hsl(175 84% 32%);
 	}
 
 	.dark {
