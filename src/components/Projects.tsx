@@ -58,11 +58,11 @@ function Projects() {
 											src={project.thumbnail}
 											alt={project.title}
 										/>
-										<div data-hover className="content-slate cursor-none">
+										<div data-hover className="content-slate md:cursor-none">
 											{/* PROJECT TITLE */}
 											<h3
 												data-hover
-												className="text-2xl font-bold text-center text-white mb-2"
+												className="text-xl md:text-2xl font-bold text-center text-white mb-2"
 											>
 												{project.title}
 											</h3>
@@ -85,7 +85,7 @@ function Projects() {
 														<p
 															data-hover
 															key={index}
-															className="bg-skills-bg px-2 py-1 rounded-xl text-sm"
+															className="bg-skills-bg px-2 py-1 rounded-xl md:text-sm text-xs"
 														>
 															{item}
 														</p>
