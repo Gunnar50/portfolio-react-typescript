@@ -31,26 +31,26 @@ function Hero() {
 						Hi, I'm Gustavo!
 					</h1>
 					<p className="font-semibold text-xl mt-4 mb-6 md:text-2xl">
-						Web <span className="text-teal-600">Developer</span> & Software{" "}
-						<span className="text-teal-600">Engineer</span>
+						Software <span className="text-teal-600">Engineer</span> & Web{" "}
+						<span className="text-teal-600">Developer</span>
 					</p>
 					<p className="mt-4 mb-10 text-gray-400">
 						I'm a Software Engineer & Cyber Security Graduate based in London
 						(U.K)
 					</p>
-					<a
+					{/* <a
 						target="_blank"
 						href={cv}
 						className="text-secondary-foreground font-semibold px-6 py-3 bg-teal-700 hover:bg-primary rounded-lg shadow transition"
 					>
 						Download CV
-					</a>
+					</a> */}
 					<ScrollLink
 						smooth={true}
 						offset={-100}
 						spy={true}
 						to="contact"
-						className="ml-3 text-primary-foreground font-semibold px-6 py-3 bg-secondary rounded-lg cursor-pointer shadow hover:bg-accent transition"
+						className="text-primary-foreground font-semibold px-6 py-3 bg-secondary rounded-lg cursor-pointer shadow hover:bg-accent transition"
 					>
 						Contact
 					</ScrollLink>
