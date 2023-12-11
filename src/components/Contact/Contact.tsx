@@ -39,6 +39,7 @@ function Contact() {
 			}
 		} catch (error) {
 			console.error("An error occurred", error);
+			toast.error("An error occurred, please try again later");
 		}
 		setLoading(false);
 	};
