@@ -2,10 +2,12 @@ import aurora from "../assets/projects/aurora/main.png";
 import gentile from "../assets/projects/gentile/main.jpg";
 import lego from "../assets/projects/lego-homage/main.png";
 import linesc from "../assets/projects/linesc/main.png";
+import portifolio from "../assets/projects/portfolio/main.png";
 import simpsons from "../assets/projects/simpsons-quotes/main.png";
 import tictactoe from "../assets/projects/tictactoe/main.png";
 import todo from "../assets/projects/todo-app/main.png";
 import weather from "../assets/projects/weather-app/main.png";
+import w3l from "../assets/projects/what3letters/main.png";
 
 export type ProjectType = {
 	id: number;
@@ -115,6 +117,30 @@ export const projects: ProjectType[] = [
 		github: "https://github.com/Gunnar50/react-redux-todolist",
 		link: "https://todo-list-gustavo-passarella.netlify.app/",
 		filter: ["All", "Web Development", "Web Application", "Challenges"],
+		type: "Web Application",
+	},
+	{
+		id: 8,
+		title: "What Three Letters",
+		about: "Hackathon Project - Iteractive app for learning and reading",
+		description: "",
+		thumbnail: w3l,
+		tech: ["React", "SASS", "Node"],
+		github: "https://github.com/Gunnar50/what-three-letter",
+		link: "https://what-three-letters.netlify.app/",
+		filter: ["All", "Web Development", "Challenges"],
+		type: "Web Application",
+	},
+	{
+		id: 9,
+		title: "Gustavo's Portfolio",
+		about: "This portfolio webpage",
+		description: "",
+		thumbnail: portifolio,
+		tech: ["React", "TypeScript", "TailwindCSS"],
+		github: "https://github.com/Gunnar50/portfolio-react-ts",
+		link: "https://gustavopassarella.co.uk",
+		filter: ["All", "Web Application", "Web Development"],
 		type: "Web Application",
 	},
 ];
