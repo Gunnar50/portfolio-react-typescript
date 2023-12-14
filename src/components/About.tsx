@@ -22,34 +22,35 @@ function About() {
 						/>
 					</h2>
 					<p>
-						Hi, my name is Gustavo and I am a
-						<span className="font-bold"> highly ambitious</span>,
-						<span className="font-bold"> self-motivated</span>, and
-						<span className="font-bold"> driven</span> Software Engineer based
-						in London, UK.
+						I'm a <span className="font-bold">Full Stack Developer</span> from
+						Brazil and living in London for the past 12 years. I've always had a
+						passion for <span className="font-bold">technology</span> and a
+						desire to go beyond of what is possible. I am a{" "}
+						<span className="font-bold">highly driven professional</span> with a
+						background in customer service, skilled in problem-solving,
+						teamwork, communication, and committed to continuous learning.
 					</p>
 					<br />
 					<p>
 						I have recently completed{" "}
-						<span className="font-bold"> The Jump Digital School's</span>{" "}
-						12-week Full-Stack
-						<span className="font-bold"> Software Engineer</span> bootcamp
-						programme, which has enabled me to develop and deploy full-stack
-						websites and applications to a professional standard.
+						<span className="font-bold">The Jump Digital School's</span> 12-week{" "}
+						<span className="font-bold">Full-Stack Software Engineer</span>{" "}
+						bootcamp programme, following a BCs(Hons) in{" "}
+						<span className="font-bold">
+							Computer Networking & Cyber Security
+						</span>{" "}
+						from London Metropolitan University. The bootcamp has enabled me to
+						develop and deploy full-stack websites and applications to industry
+						standards.
 					</p>
 					<br />
 
 					<p>
-						I am currently working as Python, SQL database, and Game Development
-						tutor at FunTech where I teach children and young adults computer
-						science and software engineering concepts.
-					</p>
-					<br />
-					<p>
-						I have a passion for
-						<span className="font-bold"> technology</span> and a desire to
-						always push the limits of what is possible. I am excited to see
-						where it can take me and I am open to new opportunities, so
+						I am currently a Python, Web Design, SQL database, and Game
+						Development tutor at FunTech coding school. I'm now actively looking
+						for developer roles and{" "}
+						<span className="font-bold">open to new opportunities</span>, so
+						feel free to{" "}
 						<ScrollLink
 							smooth={true}
 							offset={-100}
@@ -58,12 +59,12 @@ function About() {
 							className="font-bold text-teal-500 cursor-pointer"
 						>
 							{" "}
-							let's have a chat.
+							get in touch!
 						</ScrollLink>
 					</p>
 				</div>
-				<div className="md:w-1/3 ">
-					<img src={aboutImage} alt="Profile image" width={320} />
+				<div className="md:w-1/3">
+					<img src={aboutImage} alt="Profile image" width={420} />
 				</div>
 			</div>
 		</section>

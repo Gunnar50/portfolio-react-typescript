@@ -11,7 +11,7 @@ export type SkillType = {
 
 export const skillsData: SkillType[] = [
 	{
-		label: "Frontend",
+		label: "Front-end",
 		src: frontend,
 		alt: "Frontend skills atom icon",
 		skills: [
@@ -29,7 +29,7 @@ export const skillsData: SkillType[] = [
 		],
 	},
 	{
-		label: "Backend",
+		label: "Back-end",
 		src: backend,
 		alt: "Backend skills gear icon",
 		skills: [
