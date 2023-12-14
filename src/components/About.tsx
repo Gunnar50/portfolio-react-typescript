@@ -22,7 +22,7 @@ function About() {
 						/>
 					</h2>
 					<p>
-						I'm a <span className="font-bold">Full Stack Developer</span> from
+						I'm a <span className="font-bold">Full-Stack Developer</span> from
 						Brazil and living in London for the past 12 years. I've always had a
 						passion for <span className="font-bold">technology</span> and a
 						desire to go beyond of what is possible. I am a{" "}
@@ -33,7 +33,12 @@ function About() {
 					<br />
 					<p>
 						I have recently completed{" "}
-						<span className="font-bold">The Jump Digital School's</span> 12-week{" "}
+						<span className="font-bold hover:underline">
+							<a href="https://www.thejump.tech/" target="_blank">
+								The Jump Digital School's
+							</a>
+						</span>{" "}
+						12-week{" "}
 						<span className="font-bold">Full-Stack Software Engineer</span>{" "}
 						bootcamp programme, following a BCs(Hons) in{" "}
 						<span className="font-bold">
@@ -56,7 +61,7 @@ function About() {
 							offset={-100}
 							spy={true}
 							to="contact"
-							className="font-bold text-teal-500 cursor-pointer"
+							className="font-bold text-teal-500 cursor-pointer hover:underline"
 						>
 							{" "}
 							get in touch!
