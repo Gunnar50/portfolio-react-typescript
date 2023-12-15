@@ -46,84 +46,91 @@ function Projects() {
 									classes="project-item"
 									offset="-100px 0px -100px 0px"
 									key={project.id}
+									onClick={() =>
+										window.open(project.link || project.github, "_blank")
+									}
 								>
-									<Link
+									{/* <Link
 										key={project.id}
 										to={project.link || project.github}
 										target="_blank"
-									>
-										{/* PROJECT IMAGE THUMBNAIL */}
-										<img
+									> */}
+									{/* PROJECT IMAGE THUMBNAIL */}
+									<img data-hover src={project.thumbnail} alt={project.title} />
+									<div data-hover className="content-slate md:cursor-none">
+										{/* PROJECT TITLE */}
+										<h3
 											data-hover
-											src={project.thumbnail}
-											alt={project.title}
-										/>
-										<div data-hover className="content-slate md:cursor-none">
-											{/* PROJECT TITLE */}
-											<h3
-												data-hover
-												className="text-xl md:text-2xl font-bold text-center text-white mb-2"
-											>
-												{project.title}
-											</h3>
+											className="text-xl md:text-2xl font-bold text-center text-white mb-2"
+										>
+											{project.title}
+										</h3>
 
-											{/* PROJECT ABOUT */}
-											<p
-												data-hover
-												className="text-gray-300 block mb-4 text-center"
-											>
-												{project.about}
-											</p>
+										{/* PROJECT ABOUT */}
+										<p
+											data-hover
+											className="text-gray-300 block mb-4 text-center"
+										>
+											{project.about}
+										</p>
 
-											{/* TECHNOLOGIES */}
-											{project.tech && (
-												<div
-													data-hover
-													className="flex flex-wrap gap-2 justify-center mb-5"
-												>
-													{project.tech.map((item, index) => (
-														<p
-															data-hover
-															key={index}
-															className="bg-skills-bg px-2 py-1 rounded-xl md:text-sm text-xs"
-														>
-															{item}
-														</p>
-													))}
-												</div>
-											)}
-
-											{/* GITHUB AND DEMO LINKS */}
+										{/* TECHNOLOGIES */}
+										{project.tech && (
 											<div
 												data-hover
-												className={`flex w-full gap-4 justify-center`}
+												className="flex flex-wrap gap-2 justify-center mb-5"
 											>
-												{project.github && (
-													<Link to={project.github} target="_blank">
-														<div className="flex flex-col items-center group/item">
-															<BsGithub
-																size={30}
-																className="text-white transition-transform  group-hover/item:-translate-y-1 cursor-pointer"
-															/>
-															<span className="text-white">GitHub</span>
-														</div>
-													</Link>
-												)}
-
-												{project.link && (
-													<Link to={project.link} target="_blank">
-														<div className="flex flex-col items-center group/item">
-															<BsArrowUpRightSquare
-																size={30}
-																className="text-white transition-transform group-hover/item:-translate-y-1 cursor-pointer"
-															/>
-															<span className="text-white">Live Demo</span>
-														</div>
-													</Link>
-												)}
+												{project.tech.map((item, index) => (
+													<p
+														data-hover
+														key={index}
+														className="bg-skills-bg px-2 py-1 rounded-xl md:text-sm text-xs"
+													>
+														{item}
+													</p>
+												))}
 											</div>
+										)}
+
+										{/* GITHUB AND DEMO LINKS */}
+										<div
+											data-hover
+											className={`flex w-full gap-4 justify-center`}
+										>
+											{project.github && (
+												<Link
+													to={project.github}
+													target="_blank"
+													onClick={(e) => e.stopPropagation()}
+												>
+													<div className="flex flex-col items-center group/item">
+														<BsGithub
+															size={30}
+															className="text-white transition-transform  group-hover/item:-translate-y-1 cursor-pointer"
+														/>
+														<span className="text-white">GitHub</span>
+													</div>
+												</Link>
+											)}
+
+											{project.link && (
+												<Link
+													to={project.link}
+													target="_blank"
+													onClick={(e) => e.stopPropagation()}
+												>
+													<div className="flex flex-col items-center group/item">
+														<BsArrowUpRightSquare
+															size={30}
+															className="text-white transition-transform group-hover/item:-translate-y-1 cursor-pointer"
+														/>
+														<span className="text-white">Live Demo</span>
+													</div>
+												</Link>
+											)}
 										</div>
-									</Link>
+									</div>
+									{/* </Link> */}
 								</SlideUp>
 							)
 					)}
