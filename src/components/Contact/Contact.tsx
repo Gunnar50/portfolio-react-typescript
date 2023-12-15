@@ -58,9 +58,9 @@ function Contact() {
 					/>
 				</h2>
 				<div className="flex flex-col items-center md:flex-row md:items-start md:px-10">
-					<div className="md:w-2/5 mb-8 text-center md:text-left md:pr-10 md:mr-10">
+					<div className="md:w-2/5 mb-8 text-center md:text-left md:pr-10 md:mr-4">
 						<h3 className="text-2xl md:text-3xl font-semibold mb-4">
-							Available for freelance and fulltime opportunities
+							I'm available for full time opportunities
 						</h3>
 						<p>
 							Feel free to directly contact me via{" "}
