@@ -54,8 +54,8 @@ function About() {
 						I am currently a Python, Web Design, SQL database, and Game
 						Development tutor at FunTech coding school. I'm now actively looking
 						for developer roles and{" "}
-						<span className="font-bold">open to new opportunities</span>, so
-						feel free to{" "}
+						<span className="font-bold">open to new opportunities</span> in the
+						U.K, so feel free to{" "}
 						<ScrollLink
 							smooth={true}
 							offset={-100}
