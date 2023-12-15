@@ -29,17 +29,17 @@ function Hero() {
 				<div className="md:mt-2 md:w-3/5 relative">
 					<h1
 						className="heading text-4xl font-bold mt-6 md:mt-0 md:text-5xl 
-									md:whitespace-nowrap md:-ml-5"
+									md:whitespace-nowrap md:-ml-4"
 					>
 						Hi, I'm Gustavo!
 					</h1>
 					<p className="font-semibold text-xl mt-4 mb-6 md:text-2xl">
-						<span className="">Software Engineer & Web Developer</span>
+						<span className="">I'm a JavaScript Full-Stack Developer</span>
 					</p>
-					<p className="mt-4 mb-10 text-gray-400">
-						I'm a JavaScript Full Stack Developer based in London.
+					<p className="mt-4 mb-10 text-gray-300 md:text-lg">
+						React | Redux | TypeScript | Node | Express | NextJS
 						<br />
-						React | Redux | TypeScript | Node | MongoDB | MySQL
+						HTML | CSS | Sass | TailwindCSS | MySQL | MongoDB
 					</p>
 					{/* <a
 						target="_blank"
