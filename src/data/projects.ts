@@ -122,7 +122,7 @@ export const projects: ProjectType[] = [
 	{
 		id: 8,
 		title: "What Three Letters",
-		about: "Hackathon Project - Iteractive app for learning and reading",
+		about: "Hackathon Project - Interactive app for learning and reading",
 		description: "",
 		thumbnail: w3l,
 		tech: ["React", "SASS", "Node"],
