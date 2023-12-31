@@ -2,7 +2,8 @@ import aurora from "../assets/projects/aurora/main.png";
 import gentile from "../assets/projects/gentile/main1.jpg";
 import lego from "../assets/projects/lego-homage/main1.png";
 import linesc from "../assets/projects/linesc/main1.png";
-import portifolio from "../assets/projects/portfolio/main1.png";
+import listshop from "../assets/projects/list-shop/main.png";
+import portfolio from "../assets/projects/portfolio/main1.png";
 import simpsons from "../assets/projects/simpsons-quotes/main1.png";
 import tictactoe from "../assets/projects/tictactoe/main1.png";
 import todo from "../assets/projects/todo-app/main.png";
@@ -104,7 +105,7 @@ export const projects: ProjectType[] = [
 		tech: ["React", "SASS", "JavaScript", "Minimax"],
 		github: "https://github.com/Gunnar50/react-tictactoe",
 		link: "https://tictactoe-gustavo-passarella.netlify.app/",
-		filter: ["All", "Web Development", "Web Application"],
+		filter: ["All", "Web Application", "Challenges"],
 		type: "Web Application",
 	},
 	{
@@ -116,7 +117,7 @@ export const projects: ProjectType[] = [
 		tech: ["React", "Redux", "Local Storage", "SASS"],
 		github: "https://github.com/Gunnar50/react-redux-todolist",
 		link: "https://todo-list-gustavo-passarella.netlify.app/",
-		filter: ["All", "Web Development", "Web Application", "Challenges"],
+		filter: ["All", "Web Application", "Challenges"],
 		type: "Web Application",
 	},
 	{
@@ -136,10 +137,22 @@ export const projects: ProjectType[] = [
 		title: "Gustavo's Portfolio",
 		about: "This portfolio webpage",
 		description: "",
-		thumbnail: portifolio,
+		thumbnail: portfolio,
 		tech: ["React", "TypeScript", "TailwindCSS"],
 		github: "https://github.com/Gunnar50/portfolio-react-ts",
 		link: "https://gustavopassarella.co.uk",
+		filter: ["All", "Web Application", "Web Development"],
+		type: "Web Application",
+	},
+	{
+		id: 10,
+		title: "List Shop Save",
+		about: "Supermarket Price Comparator App",
+		description: "",
+		thumbnail: listshop,
+		tech: ["React", "Redux", "GSAP", "Node", "Express", "MySQL"],
+		github: "https://github.com/Gunnar50/list-shop-save-react-node",
+		link: "https://listshopsave.uk",
 		filter: ["All", "Web Application", "Web Development"],
 		type: "Web Application",
 	},
