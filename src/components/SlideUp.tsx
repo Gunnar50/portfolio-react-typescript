@@ -5,8 +5,7 @@ interface Props {
 	classes?: string;
 	offset?: string;
 	children?: ReactNode;
-	onClick?: (event: MouseEvent) => void;
-	// any props that come into the component
+	onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 function SlideUp({
@@ -16,7 +15,7 @@ function SlideUp({
 	offset = "0px",
 	onClick,
 }: Props) {
-	const ref = useRef(null);
+	const ref = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -35,6 +34,12 @@ function SlideUp({
 		if (ref.current) {
 			observer.observe(ref.current);
 		}
+
+		return () => {
+			if (ref.current) {
+				observer.unobserve(ref.current);
+			}
+		};
 	}, [ref]);
 
 	return (
