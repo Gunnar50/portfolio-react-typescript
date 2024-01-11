@@ -1,6 +1,5 @@
 import { HiArrowDown } from "react-icons/hi";
 import { Link as ScrollLink } from "react-scroll/modules";
-// import cv from "../assets/Gustavo_Passarella_CV_SE-2023.pdf";
 import bgImage from "../assets/bgpattern3.png";
 import profileImage from "../assets/images/profileImage2.png";
 
