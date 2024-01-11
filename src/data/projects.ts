@@ -3,7 +3,7 @@ import gentile from "../assets/projects/gentile/main1.jpg";
 import lego from "../assets/projects/lego-homage/main1.png";
 import linesc from "../assets/projects/linesc/main1.png";
 import listshop from "../assets/projects/list-shop/main.png";
-import portfolio from "../assets/projects/portfolio/main1.png";
+import portfolio from "../assets/projects/portfolio/main2.png";
 import simpsons from "../assets/projects/simpsons-quotes/main1.png";
 import tictactoe from "../assets/projects/tictactoe/main1.png";
 import todo from "../assets/projects/todo-app/main.png";
@@ -147,7 +147,7 @@ export const projects: ProjectType[] = [
 	{
 		id: 10,
 		title: "List Shop Save",
-		about: "Supermarket Price Comparator App",
+		about: "Supermarket Price Comparator Full Stack Application",
 		description: "",
 		thumbnail: listshop,
 		tech: ["React", "Redux", "GSAP", "Node", "Express", "MySQL"],
