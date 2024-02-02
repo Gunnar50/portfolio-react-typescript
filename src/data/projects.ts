@@ -3,6 +3,7 @@ import gentile from "../assets/projects/gentile/main1.jpg";
 import lego from "../assets/projects/lego-homage/main1.png";
 import linesc from "../assets/projects/linesc/main1.png";
 import listshop from "../assets/projects/list-shop/main.png";
+import pathfinding from "../assets/projects/pathfinding/main.png";
 import portfolio from "../assets/projects/portfolio/main2.png";
 import simpsons from "../assets/projects/simpsons-quotes/main1.png";
 import tictactoe from "../assets/projects/tictactoe/main1.png";
@@ -154,6 +155,18 @@ export const projects: ProjectType[] = [
 		github: "https://github.com/Gunnar50/list-shop-save-react-node",
 		link: "https://listshopsave.uk",
 		filter: ["All", "Web Application", "Web Development"],
+		type: "Web Application",
+	},
+	{
+		id: 11,
+		title: "Pathfinding Visualiser",
+		about: "Project to better understand and visualise pathfinding algorithms",
+		description: "",
+		thumbnail: pathfinding,
+		tech: ["React", "TypeScript", "GSAP", "Pathfinding", "Algorithms"],
+		github: "https://github.com/Gunnar50/pathfinding-visualiser-ts",
+		link: "https://pathfinding-visualiser-gustavo.netlify.app/",
+		filter: ["All", "Challenges"],
 		type: "Web Application",
 	},
 ];
