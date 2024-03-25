@@ -153,7 +153,7 @@ export const projects: ProjectType[] = [
 		thumbnail: listshop,
 		tech: ["React", "Redux", "GSAP", "Node", "Express", "MySQL"],
 		github: "https://github.com/Gunnar50/list-shop-save-react-node",
-		link: "https://listshopsave.uk",
+		link: "",
 		filter: ["All", "Web Application", "Web Development"],
 		type: "Web Application",
 	},
