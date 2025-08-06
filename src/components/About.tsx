@@ -22,40 +22,36 @@ function About() {
 						/>
 					</h2>
 					<p>
-						I'm a <span className="font-bold">Full-Stack Developer</span> from
-						Brazil and living in London for the past 12 years. I've always had a
+						I'm a detailed-oriented <span className="font-bold">Software Engineer</span> from
+						Brazil and living in London for the past 12 years. I am currently working
+						as a <span className="font-bold">Python Engineer</span> at Phantom, a creative agency specialised in 
+						crafting experiences for global brands. I build robust and scalable 
+						backend solutions and work closely with  
+						<span className="font-bold"> Google Cloud Platform infrastructure.</span>
+					</p>
+					<br />
+					<p>
+						At Phantom, I collaborate on projects for major clients like 
+						<span className="font-bold"> Google</span> and the  
+						<span className="font-bold"> Financial Times</span> contributing to 
+						innovative solutions across a large range of technologies. 
+					<p>
+					<br />
+					</p>
+						I've always had a
 						passion for <span className="font-bold">technology</span> and a
-						desire to go beyond of what is possible. I am a{" "}
+						desire to go beyond of what is possible. 
+						I am a{" "}
 						<span className="font-bold">highly driven professional</span> with a
 						background in customer service, skilled in problem-solving,
 						teamwork, communication, and committed to continuous learning.
 					</p>
 					<br />
 					<p>
-						I have recently completed{" "}
-						<span className="font-bold hover:underline">
-							<a href="https://www.thejump.tech/" target="_blank">
-								The Jump Digital School's
-							</a>
-						</span>{" "}
-						12-week{" "}
-						<span className="font-bold">Full-Stack Software Engineer</span>{" "}
-						bootcamp programme, following a BCs(Hons) in{" "}
-						<span className="font-bold">
-							Computer Networking & Cyber Security
-						</span>{" "}
-						from London Metropolitan University. The bootcamp has enabled me to
-						develop and deploy full-stack websites and applications to industry
-						standards.
-					</p>
-					<br />
-
-					<p>
-						I am currently a Python, Web Design, SQL database, and Game
-						Development tutor at FunTech coding school. I'm now actively looking
-						for developer roles and{" "}
-						<span className="font-bold">open to new opportunities</span> in the
-						U.K, so feel free to{" "}
+						My main stack is Python, but I also enjoy working with other tools{" "}
+						and frameworks such as React, TypeScript, Next.js, Node, Express, 
+						MongoDB, and MySQL. I'm always <span className="font-bold">open to new opportunities</span>,
+						so feel free to
 						<ScrollLink
 							smooth={true}
 							offset={-100}
