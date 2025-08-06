@@ -31,10 +31,8 @@ function Contact() {
 			);
 
 			if (response.data.success) {
-				// console.log("Success", response);
 				toast.success(response.data.message);
 			} else {
-				// console.log("Error", response);
 				toast.error(response.data.message);
 			}
 		} catch (error) {
@@ -60,7 +58,7 @@ function Contact() {
 				<div className="flex flex-col items-center md:flex-row md:items-start md:px-10">
 					<div className="md:w-2/5 mb-8 text-center md:text-left md:pr-10 md:mr-4">
 						<h3 className="text-2xl md:text-3xl font-semibold mb-4">
-							I'm available for full time opportunities
+							I'm open for new opportunities!
 						</h3>
 						<p>
 							Feel free to directly contact me via{" "}
